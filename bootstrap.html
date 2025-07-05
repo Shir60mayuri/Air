@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    import React from "react";
+import { Navbar, Nav, Form, FormControl, Button } from "react-bootstrap";
+import { FaShoppingCart } from "react-icons/fa";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+const AmazonNavbar = () => {
+  return (
+    <Navbar bg="dark" variant="dark" expand="lg" className="px-3">
+      <Navbar.Brand href="#" className="fw-bold text-warning">
+        Amazon Clone
+      </Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Form className="d-flex mx-auto" style={{ width: "50%" }}>
+          <FormControl
+            type="search"
+            placeholder="Search products..."
+            className="me-2"
+          />
+          <Button variant="warning">Search</Button>
+        </Form>
+        <Nav>
+          <Nav.Link href="#" className="text-light">Sign In</Nav.Link>
+          <Nav.Link href="#" className="text-light">Orders</Nav.Link>
+          <Nav.Link href="#" className="text-light">
+            <FaShoppingCart size={20} /> Cart
+          </Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
+  );
+};
+
+export default AmazonNavbar;
+</head>
+<body>
+    
+</body>
+</html>
